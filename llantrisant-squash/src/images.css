@@ -1,0 +1,336 @@
+.about_us {
+	background: url("../src/assets/images/about_us.png");
+	width: 40px;
+	height: 40px;
+}
+
+.appearances {
+	background: url("../src/assets/images/appearances.png");
+	width: 40px;
+	height: 40px;
+}
+
+.back {
+	background: url("../src/assets/images/back.png");
+	width: 40px;
+	height: 40px;
+}
+
+.celtic_waste {
+	background: url("../src/assets/images/celtic_waste.png");
+	width: 147px;
+	height: 40px;
+}
+
+.coaching {
+	background: url("../src/assets/images/coaching.png");
+	width: 40px;
+	height: 40px;
+}
+
+.contact {
+	background: url("../src/assets/images/contact_us.png");
+	width: 40px;
+	height: 40px;
+}
+
+.court {
+	background: url("../src/assets/images/court.png");
+	width: 40px;
+	height: 40px;
+}
+
+span.down {
+	background: url("../src/assets/images/down_order_arrow.png");
+	width: 15px;
+	height: 15px;
+}
+
+/*.email {
+	background: url("../src/assets/images/email.jpg");
+	width: 40px;
+	height: 40px;
+}*/
+
+.english {
+	background: url('../src/assets/images/english_flag.gif') no-repeat left top;
+	height: 30px;
+	padding-left: 60px;
+	padding-top: 7px;
+}
+
+.facebook {
+	background: url("../src/assets/images/facebook.png");
+	width: 40px;
+	height: 40px;
+}
+
+.fixtures {
+	background: url("../src/assets/images/fixtures.png");
+	width: 40px;
+	height: 40px;
+}
+
+.home {
+	background: url("../src/assets/images/home.png");
+	width: 40px;
+	height: 33px;
+}
+
+.ladders {
+	background: url("../src/assets/images/ladder.png");
+	width: 40px;
+	height: 40px;
+}
+
+.llantrisant {
+	background: url('../src/assets/images/logo_llantrisant_vsmall.png') no-repeat left top;
+	height: 30px;
+	padding-left: 60px;
+	padding-top: 7px;
+	background-position-x: 6px;
+}
+
+.maps {
+	background: url("../src/assets/images/maps.png");
+	width: 40px;
+	height: 40px;
+}
+
+.pictures {
+	background: url('../src/assets/images/pictures.png') no-repeat left top;
+	width: 40px;
+	height: 40px;
+}
+
+.psa {
+	background: url('../src/assets/images/psa.jpg') no-repeat left top;
+	height: 30px;
+	padding-left: 60px;
+	padding-top: 7px;
+}
+
+.racketball {
+	background: url("../src/assets/images/racketball.png");
+	width: 90px;
+	height: 90px;
+}
+
+.ranking {
+	background: url("../src/assets/images/rankings.png");
+	width: 40px;
+	height: 40px;
+}
+
+.regional {
+	background: url('../src/assets/images/regional.png') no-repeat left top;
+	height: 30px;
+	padding-left: 60px;
+	padding-top: 7px;
+	background-position-x: 6px;
+}
+
+.results {
+	background: url("../src/assets/images/results.png");
+	width: 40px;
+	height: 40px;
+}
+
+.scoreCard {
+	background: url("../src/assets/images/score_card.png");
+	width: 40px;
+	height: 40px;
+}
+
+.squash {
+	background: url("../src/assets/images/squash.png");
+	width: 90px;
+	height: 90px;
+}
+
+.social_media {
+	background: url("../src/assets/images/social_media.png");
+	width: 40px;
+	height: 40px;
+}
+
+.sponsors {
+	background: url("../src/assets/images/sponsors.png");
+	width: 40px;
+	height: 41px;
+}
+
+.sponsor_eye_rackets {
+	background: url("../src/assets/images/sponsor_logo_eye_rackets_small.jpg");
+	width: 208px;
+	height: 100px;
+}
+
+.sponsor_eye_rackets_mini {
+	background: url("../src/assets/images/sponsor_logo_eye_rackets_mini.jpg");
+	width: 83px;
+	height: 40px;
+}
+
+.sponsor_jordan_civils {
+	background: url("../src/assets/images/sponsor_logo_jordan_civils_small.jpg");
+	width: 336px;
+	height: 100px;
+}
+
+.sponsor_jordan_civils_mini {
+	background: url("../src/assets/images/sponsor_logo_jordan_civils_mini.jpg");
+	width: 134px;
+	height: 40px;
+}
+
+.sponsor_merch_asylum {
+	background: url("../src/assets/images/sponsor_logo_merch_asylum_white_small.png");
+	width: 215px;
+	height: 100px;
+}
+
+.sponsor_merch_asylum_mini {
+	background: url("../src/assets/images/sponsor_logo_merch_asylum_white_mini.png");
+	width: 81px;
+	height: 40px; 	
+}
+
+.sponsor_squash_wales {
+	background: url("../src/assets/images/sponsor_logo_squash_wales_small.jpg");
+	width: 248px;
+	height: 100px;
+}
+
+.sponsor_squash_wales_mini {
+	background: url("../src/assets/images/sponsor_logo_squash_wales_mini.jpg");
+	width: 99px;
+	height: 40px;
+}
+
+.sponsor_st_clares {
+	background: url("../src/assets/images/sponsor_logo_st_clares_small.jpg");
+	width: 150px;
+	height: 100px;
+}
+
+.sponsor_st_clares_mini {
+	background: url("../src/assets/images/sponsor_logo_st_clares_mini.jpg");
+	width: 60px;
+	height: 40px;
+}
+
+/*.squashBall {
+	background: url("../src/assets/images/squash_ball.jpg");
+	width: 40px;
+	height: 40px;
+}*/
+
+.squashClub {
+	background: url("../src/assets/images/squash_club_small.png");
+	width: 40px;
+	height: 40px;
+}
+
+.squashWales {
+	background: url("../src/assets/images/squash_wales_small.jpg");
+	width: 40px;
+	height: 40px;
+}
+
+.team {
+	background: url("../src/assets/images/team.png");
+	width: 40px;
+	height: 40px;
+}
+
+.team_standings {
+	background: url("../src/assets/images/team_standings.png");
+	width: 40px;
+	height: 40px;
+}
+
+/*.telephone {
+	background: url("../src/assets/images/telephone.jpg");
+	width: 40px;
+	height: 40px;
+}*/
+
+.phone {
+	background: url("../src/assets/images/phone.png");
+	width: 40px;
+	height: 40px;
+}
+
+.tournament {
+	background: url("../src/assets/images/tournament.png");
+	width: 40px;
+	height: 40px;
+}
+
+.tournament_draw {
+	background: url("../src/assets/images/tournament_draw.png");
+	width: 40px;
+	height: 40px;
+}
+
+.tournament_entry {
+	background: url("../src/assets/images/tournament_entry.png");
+	width: 40px;
+	height: 40px;
+}
+
+.tournament_faqs {
+	background: url("../src/assets/images/tournament_faqs.png");
+	width: 40px;
+	height: 40px;
+}
+
+.tournament_history {
+	background: url("../src/assets/images/tournament_history.png");
+	width: 40px;
+	height: 40px;
+}
+
+.tournament_prize_money {
+	background: url("../src/assets/images/tournament_prize_money.png");
+	width: 40px;
+	height: 40px;
+}
+
+.twitter {
+	background: url("../src/assets/images/twitter.png");
+	width: 40px;
+	height: 40px;
+}
+
+.under_construction {
+	background: url("../src/assets/images/under_construction.jpg");
+	width: 150px;
+	height: 150px;
+}
+
+span.up {
+	background: url("../src/assets/images/up_order_arrow.png");
+	width: 15px;
+	height: 15px;
+}
+
+.upAndDown {
+	background: url("../src/assets/images/up_and_down.png");
+	width: 40px;
+	height: 40px;
+}
+
+.www {
+	background: url("../src/assets/images/www.png");
+	width: 40px;
+	height: 40px;
+}
+
+.welsh {
+	background: url('../src/assets/images/welsh_flag.gif') no-repeat left top;
+	height: 30px;
+	padding-left: 60px;
+	padding-top: 7px;
+}
