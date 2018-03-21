@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700');
 
 /* Main Header */
 body {
-	font-family: 'Arimo Regular';
+	font-family: 'Arimo', sans-serif;
     background: linear-gradient(to bottom, #0A0F14,#213141, #0A0F14); /* For browsers that do not support gradients */
 	color:#D9DBDE;
     /*background: -webkit-linear-gradient(#4F6059, #262626); /* For Safari 5.1 to 6.0 */

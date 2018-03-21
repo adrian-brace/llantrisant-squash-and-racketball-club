@@ -7,6 +7,12 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { FixturesComponent } from './fixtures/fixtures.component';
 import { FixturesService } from './fixtures.service';
+import { enableProdMode } from '@angular/core';
+import { OrderBy } from "./pipes/orderBy.pipe";
+import "../extension_methods/ArrayExtensions";
+import "../extension_methods/NumberExtensions";
+import "../extension_methods/StringExtensions";
+
 
 // Define the routes
 const ROUTES = [
@@ -21,10 +27,13 @@ const ROUTES = [
   }
 ];
 
+enableProdMode();
+
 @NgModule({
   declarations: [
     AppComponent,
-    FixturesComponent
+    FixturesComponent,
+    OrderBy
   ],
   imports: [
     BrowserModule,

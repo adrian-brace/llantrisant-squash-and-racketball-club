@@ -1,19 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { FixturesService } from '../fixtures.service';
+import { SharedFunctions } from '../shared-functions';
 
 @Component({
   selector: 'app-fixtures',
   templateUrl: './fixtures.component.html',
-  styleUrls: ['./fixtures.component.css']
+  styleUrls: ['./fixtures.component.css'],
 })
 export class FixturesComponent implements OnInit {
 
   fixtures: any = [];
   results: any = [];
+  direction: string = "+";
+  orderColumn: string = "date";
+  filter: any = {};
+  year: number = 0;
+  season: string = "";
 
   constructor(private fixturesService: FixturesService) { }
 
   ngOnInit() {
+
+    this.year = SharedFunctions.getYear();
+    this.season = SharedFunctions.getSeason();
+
     // Retrieve fixtures from the API
     this.fixturesService.getAllFixtures().subscribe(fixtures => {
       this.fixtures = this.fixturesOnly(fixtures);
@@ -21,9 +31,9 @@ export class FixturesComponent implements OnInit {
     });
   }
 
-  getOptionsFor = function (propName, isFixtures) {
+  getOptionsFor = function (propName: string, isFixtures: boolean = true) {
 					
-    var data;
+    var data = [];
     
     if (isFixtures){
       data = this.fixtures;
@@ -38,7 +48,7 @@ export class FixturesComponent implements OnInit {
     });
   };
 
-  fixturesOnly = function (items) {
+  fixturesOnly = function (items: any) {
     var filtered = [];
     if(typeof items !== 'undefined'){
       for (var i = 0; i < items.length; i++) {
@@ -53,7 +63,7 @@ export class FixturesComponent implements OnInit {
     return filtered;
   };
   
-  resultsOnly = function (items) {
+  resultsOnly = function (items: any) {
     var filtered = [];
     if(typeof items !== 'undefined'){
       for (var i = 0; i < items.length; i++) {
@@ -67,4 +77,27 @@ export class FixturesComponent implements OnInit {
     }
     return filtered;
   };
+
+  teamLetter = function(teamName: string) {
+    if (!teamName || !teamName.length) {
+      return;
+    }
+    else{
+      return teamName.slice(-1);
+    }
+  }
+
+  sort = function(column: string) {
+		if (this.orderColumn === column) {
+			this.direction = "-";
+		} else {
+			this.orderColumn = column;
+			this.direction = "+";
+		}
+  };
+
+  clearFilter = function() {
+		this.filter = {};
+	}
+  
 }
