@@ -8,15 +8,12 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:4200",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "type": "chrome",
-            "request": "attach",
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "webRoot": "${workspaceFolder}"
+            "url": "http://localhost:4200/",
+            "sourceMaps": true,
+            "trace": true,
+            "sourceMapPathOverrides": { "webpack:///src/*": "${workspaceRoot}/src/*" },
+            "webRoot": "${workspaceFolder}/src",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome"
         }
     ]
 }

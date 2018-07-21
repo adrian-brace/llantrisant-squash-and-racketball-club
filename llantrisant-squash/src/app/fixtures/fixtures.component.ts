@@ -13,21 +13,30 @@ export class FixturesComponent implements OnInit {
   results: any = [];
   direction: string = "+";
   orderColumn: string = "date";
-  filter: any = {};
+  fixturesFilter: any = {};
   year: number = 0;
   season: string = "";
+  teamOptions: any = [];
+  isHomeOptions: any = [];
 
   constructor(private fixturesService: FixturesService) { }
 
   ngOnInit() {
-
+    
     this.year = SharedFunctions.getYear();
     this.season = SharedFunctions.getSeason();
 
     // Retrieve fixtures from the API
     this.fixturesService.getAllFixtures().subscribe(fixtures => {
       this.fixtures = this.fixturesOnly(fixtures);
-      this.results = this.resultsOnly(fixtures);
+      this.teamOptions = this.getOptionsFor('team', true);
+      this.isHomeOptions = this.getOptionsFor('isHome', true);
+
+      this.fixturesFilter = {
+        team: this.teamOptions,
+        isHome: this.isHomeOptions   
+      };
+      //this.results = this.resultsOnly(fixtures);
     });
   }
 
@@ -97,7 +106,25 @@ export class FixturesComponent implements OnInit {
   };
 
   clearFilter = function() {
-		this.filter = {};
+		this.fixturesFilter = {};
 	}
   
+  /*
+  filterByTeam = function (fixture) {
+
+    if(fixture === null){
+      return null;
+    }
+
+    // Use this snippet for matching with AND
+    var matchesAND = true;
+    for (var prop in this.filter) {
+        if (SharedFunctions.noSubFilter(this.filter[prop])) continue;
+        if (!this.filter[prop][fixture[prop]]) {
+            matchesAND = false;
+            break;
+        }
+    }
+    return matchesAND;	
+  }*/
 }

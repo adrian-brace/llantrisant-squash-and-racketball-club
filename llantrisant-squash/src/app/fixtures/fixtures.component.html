@@ -23,7 +23,7 @@
 		<table class="dataTable">
 			<thead>			
 				<tr>
-					<th [attr.colspan]="getOptionsFor('team', true).length">
+					<th [attr.colspan]="teamOptions.length">
 						Team Filter
 					</th>
 					<th colspan="2">
@@ -31,26 +31,26 @@
 					</th>
 				</tr>
 				<tr>
-					<th *ngFor="let opt of getOptionsFor('team', true)">
-						{{teamLetter(opt)}}
+					<th *ngFor="let teamOption of teamOptions">
+						{{teamLetter(teamOption)}}
 					</th>
-					<th *ngFor="let opt of getOptionsFor('isHome', true)">
-						<span [hidden]="opt">Home</span>
-						<span [hidden]="!opt">Away</span>				
+					<th *ngFor="let isHomeOption of isHomeOptions">
+						<span [hidden]="isHomeOption">Home</span>
+						<span [hidden]="!isHomeOption">Away</span>				
 					</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td *ngFor="let opt of getOptionsFor('team', true)" style='text-align:center;'>
-						<input type="checkbox" [(ngModel)]="filter['team'][opt]" />
+					<td *ngFor="let teamOption of teamOptions" style='text-align:center;'>
+						<input type="checkbox" [(ngModel)]="fixturesFilter['team'][teamOption]" />
 					</td>
-					<td style='text-align:center;' *ngFor="let opt of getOptionsFor('isHome', true)">
-						<input type="checkbox" [(ngModel)]="filter['isHome'][opt]" />
+					<td style='text-align:center;' *ngFor="let isHomeOption of isHomeOptions">
+						<input type="checkbox" [(ngModel)]="fixturesFilter['isHome'][isHomeOption]" />
 					</td>
 				</tr>
 				<tr>
-					<td [attr.colspan]="getOptionsFor('team', true).length">
+					<td [attr.colspan]="teamOptions.length">
 						<button id="clear-filter" (click)="clearFilter()" onclick="clearAll();" type="button">Clear Filter</button>
 					</td>
 					<td colspan="2">
@@ -60,11 +60,11 @@
 			</tbody>
 		</table>
 	</div>
-	<p class="warningMessage" [hidden]="filtered=(fixtures | filter:filterByTeam).length == 0">
+	<p class="warningMessage" [hidden]="(fixtures | filter: fixturesFilter).length == 0">
 		No fixtures found
 	</p>
 	<div class="dataTable">
-		<table class="dataTable" [hidden]="filtered=(fixtures | filter:filterByTeam)[0] != null">
+		<table class="dataTable" [hidden]="(fixtures | filter: fixturesFilter).length > 0">
 			<thead>
 				<tr>
 					<th align="center">
@@ -78,11 +78,11 @@
 					<th>Time</th>
 				</tr>
 			</thead>
-			<tbody>					
+			<tbody>				
 				<!-- LOOP OVER THE fixtures IN $scope.fixtures -->
 				
 				<!--<tr *ngFor="let fixture of (fixtures | filter:filterByTeam) | orderBy:[orderColumn]:direction">-->
-				<tr *ngFor="let fixture of fixtures | orderBy: 'date'">	
+				<tr *ngFor="let fixture of fixtures | filter: fixturesFilter | orderBy: 'date'">	
 					<td align="left" [ngClass]="{'clashClass': fixture.isClash}">
 						{{fixture?.date | date:'EEEE d MMMM'}}
 					</td>

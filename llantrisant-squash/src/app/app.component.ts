@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OrderBy } from "./pipes/orderBy.pipe";
+import { Filter } from "./pipes/filter.pipe";
 
 @Component({
   selector: 'app-root',

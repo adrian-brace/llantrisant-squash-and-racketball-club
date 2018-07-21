@@ -9,6 +9,7 @@ import { FixturesComponent } from './fixtures/fixtures.component';
 import { FixturesService } from './fixtures.service';
 import { enableProdMode } from '@angular/core';
 import { OrderBy } from "./pipes/orderBy.pipe";
+import { Filter } from "./pipes/filter.pipe";
 import "../extension_methods/ArrayExtensions";
 import "../extension_methods/NumberExtensions";
 import "../extension_methods/StringExtensions";
@@ -33,7 +34,8 @@ enableProdMode();
   declarations: [
     AppComponent,
     FixturesComponent,
-    OrderBy
+    OrderBy,
+    Filter
   ],
   imports: [
     BrowserModule,
